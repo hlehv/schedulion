@@ -5,3 +5,17 @@
 .App{
   font-family: 'Space Mono', serif;
 }
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 10px;
+  font-weight: bold;
+  height: 100px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 1;
+  text-align: left;
+  width: 150px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Survey from './Containers/Survey/Survey'
+import Schedule from './Containers/Schedule/Schedule'
 import StartButton from './Containers/StartButton'
 import { Layout, Menu } from 'antd';
 
@@ -11,14 +12,21 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      stage: 'start',
+      stage: 'schedule',
     }
     this.handleStartClick = this.handleStartClick.bind(this);
+    this.handleScheduleClick = this.handleScheduleClick.bind(this);
   }
 
   handleStartClick(){
     this.setState({
       stage: 'survey',
+    });
+  }
+
+  handleScheduleClick(){
+    this.setState({
+      stage: 'schedule',
     });
   }
 
@@ -42,8 +50,11 @@ class App extends Component {
               <StartButton onClick={this.handleStartClick} />
               }
               {this.state.stage==="survey" &&
-              <Survey />
+              <Survey onClick={this.handleScheduleClick}/>
               }
+              {this.state.stage==="schedule" &&
+              <Schedule />
+              } 
             </div>
           </Content>
       </div>
@@ -52,32 +63,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
-
-
-/*        <Layout>
-  `         <Header 
-              className='header'
-              style={{
-                position: 'fixed', zIndex: 1, width: '100'
-              }}>
-  `          <div className="logo" />
-            <Menu
-              theme="light"
-              mode="horizontal"
-              defaultSelectedKeys={['2']}
-              style={{lineHeight: '64px'}}
-            >
-              <Menu.Item key="1">Home</Menu.Item>
-              <Menu.Item key="1">Settings</Menu.Item>
-              <Menu.Item key="1">Schedule</Menu.Item>
-            </Menu>
-            </Header>
-          <Content style = {{padding: '0 50px', marginTop: 64}}>
-
-          </Content>
-        </Layout>*/
-
-        
