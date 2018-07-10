@@ -12,7 +12,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      stage: 'schedule',
+      stage: 'start',
     }
     this.handleStartClick = this.handleStartClick.bind(this);
     this.handleScheduleClick = this.handleScheduleClick.bind(this);
