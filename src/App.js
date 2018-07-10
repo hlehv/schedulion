@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Survey from './Containers/Survey/Survey'
 import StartButton from './Containers/StartButton'
 import { Layout, Menu } from 'antd';
 
@@ -39,6 +40,9 @@ class App extends Component {
             <div style={{background: '#fff', padding: '15%', minHeight: 280, textAlign: 'center'}}>
               {this.state.stage==="start" && 
               <StartButton onClick={this.handleStartClick} />
+              }
+              {this.state.stage==="survey" &&
+              <Survey />
               }
             </div>
           </Content>
