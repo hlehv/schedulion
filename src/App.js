@@ -28,11 +28,11 @@ class App extends Component {
             <Menu
               mode="horizontal"
               defaultSelectedKeys={['1']}
-              style={{ lineHeight: '64px', }}
+              style={{ fontFamily: 'Space Mono', fontSize: 12, paddingTop: 2, paddingLeft: 0}}
             >
-              <Menu.Item key="1">Home</Menu.Item>
-              <Menu.Item key="2">Settings</Menu.Item>
-              <Menu.Item key="3">Schedule</Menu.Item>
+              <Menu.Item key="1">HOME</Menu.Item>
+              <Menu.Item key="2">SETTINGS</Menu.Item>
+              <Menu.Item key="3">SCHEDULE</Menu.Item>
             </Menu>
           </Header>
           <Content style={{padding: '0 50px' }}>
