@@ -37,7 +37,7 @@ class App extends Component {
             </Menu>
           </Header>
           <Content style={{padding: '0 50px' }}>
-            <div style={{background: '#fff', padding: '15%', minHeight: 280, textAlign: 'center'}}>
+            <div>
               {this.state.stage==="start" && 
               <StartButton onClick={this.handleStartClick} />
               }
