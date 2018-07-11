@@ -1,14 +1,13 @@
 import React from 'react';
 import '../../App.css';
-import { Popover } from 'antd';
+import { Popover, Card } from 'antd';
 
 function Square(props) {
     return (
-    <Popover content={props.value} title="Options">
-      <button className="square" onClick={props.onClick}>
+      <Card bordered={false} hoverable style={{fontSize: "70%", title: 10}} onClick={props.onClick}>
+        <b> {props.semester} </b> <br /> <br />
         {props.value}
-      </button>
-      </Popover>
+      </Card>
     );
   }
 
